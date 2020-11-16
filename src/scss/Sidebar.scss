@@ -1,0 +1,84 @@
+
+@import 'General.scss';
+
+#sidebar {
+    background-color:$white-color;
+    max-width: 150px;
+    padding: 0;
+    height: 100vh;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+    .navbar-expand-lg {
+        flex-flow: column;
+        }
+    .navbar {
+        padding: 0;
+        .sidebar-header {
+            height: 55px;
+            padding: 10px;
+            width: 100%;
+            background-color: $primary-color;
+            }
+        .navbar-brand {
+            font-size: 21px;
+            font-weight: 500;
+            color: $white-color;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding-top: .3125rem;
+            @media (max-width: $breakpoint-custom){
+                text-align: right;
+                width: 150px;
+                width: 100%;
+                margin: 0;
+                padding: 7px;
+                font-size: 17px;
+                }
+            }
+        .nav-item {
+            display: block;
+            width: 100%;
+            text-align: center;
+            }
+        .nav-link {
+            padding: 1.5rem;
+            font-size: 13px;
+            &.active {
+                border-left: 4px solid $primary-color;
+                color: $primary-color;
+                }
+            }
+        }
+    .material-icons{
+        display: block;
+        text-align: center;
+        }
+    @media (max-width: $breakpoint-custom){
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        z-index: 1;
+        background-color: transparent;
+        height: 55px;
+        .navbar-toggler{
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 15px 9px 2px;
+            vertical-align: middle;
+            color: $white-color;
+            .material-icons{
+                text-align: center;
+                vertical-align: middle;
+                display: inline-block;
+                }
+        }
+        .navbar-collapse {
+            background-color:$white-color;
+            .show {
+                display: block;
+            }
+        }
+    }
+  }

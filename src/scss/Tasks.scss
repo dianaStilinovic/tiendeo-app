@@ -1,0 +1,173 @@
+@import 'General.scss';
+
+#card-tasks { 
+    h2 {
+    margin-bottom: .75rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    }
+    .task-footer{
+        .link-add-task{
+            font-size: 12px;
+            color: $text-color;
+            display: block;
+            text-align: center;
+            &:hover {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        span{
+            font-size: 17px;
+            vertical-align: middle;
+            margin-left: 3px;
+            }
+        }
+    }
+    .btn-add-task{
+        border-radius: 50%;
+        padding: 0;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        background-color: $text-color;
+        border:none;
+        &:hover {
+            background-color: $secondary-color;
+            span {
+                color: #fff;
+                }
+            }
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            padding: 15px;
+            }
+        }
+    .task-col {
+        background-color: #F6F8FC;
+        -webkit-box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.15);
+        box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.15);
+        border: none;
+        padding: 15px;
+        margin: 0 7px 0;
+        border-top: 5px solid transparent;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        @media (max-width: $breakpoint-custom-tablet) {
+            overflow: visible;
+            flex-basis: revert;
+            }
+        circle{
+            fill: linear-gradient(to right, #81D5EE 0%, #7ED4AB 100%); 
+           }
+        &#task-backlog {
+            border-image: linear-gradient(to left, $BacklogLeft 0%, $BacklogRight 100%) 1; 
+            .card-label {
+                background: linear-gradient(to right,  $BacklogLeft 0%, $BacklogRight 100%); 
+                }
+            .st1 {
+                fill:$Backlog-color;  
+                }
+            }
+        &#task-in-progress {
+            border-image: linear-gradient(to left, $InProgressogLeft 0%, $InProgressRight 100%) 1; 
+            .card-label {
+                background: linear-gradient(to right, $InProgressogLeft 0%, $InProgressRight 100%); 
+                }
+            .st1 {
+                fill: $InProgress-color;  
+                }
+            }
+        &#task-review {
+            border-image: linear-gradient(to left, $ReviewLeft 0%, $ReviewRight 100%) 1; 
+            .card-label {
+                background: linear-gradient(to right, $ReviewLeft 0%, $ReviewRight 100%); 
+                }
+            .st1 {
+                fill: $Review-color;   
+                }
+            }
+        &#task-complete {
+            border-image: linear-gradient(to left, $CompletegLeft 0%, $CompleteRight 100%) 1; 
+            .card-label{
+                background: linear-gradient(to right, $CompletegLeft 0%, $CompleteRight 100%); 
+                }
+            .st1 {
+                fill:$Complete-color;   
+                }
+            }
+        .st0 {
+            fill:#fff !important;  
+            }
+        .column {
+            min-height: 30px;
+            }
+        .card{
+            background-color: #fff;
+            -webkit-box-shadow:0px 3px 4px -1px rgba(0,0,0,0.15);
+            box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.15);
+            border: none;
+            margin-bottom: 15px;
+            padding: 5px 0 0;
+            .material-icons{
+                vertical-align: middle;
+                font-size: 16px;
+                padding: 0 5px;
+                }
+            .card-header,
+            .card-body,
+            .card-footer{
+                border: none;
+                background-color: transparent;
+                }
+            .card-header{
+                &:hover {
+                    cursor: pointer;
+                    }
+                }
+            .card-label {
+                font-size: 13px;
+                color: #fff;
+                background-color: $text-color;
+                border-radius: 3px;
+                display: inline-block;
+                min-width: 120px;
+                text-align: center;
+                margin-bottom: 0;
+                }
+            .card-body {
+                position: relative;
+                padding: 5px 20px 15px;
+                }
+            .card-footer{
+                li{
+                    font-size: 12px;
+                    font-weight: 500;
+                    }
+                .list-group {
+                    position: relative;
+                    }
+                .list-group-item {
+                    padding: 0;
+                    padding-right: 10px;
+                    border: none;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    background-size: 13px 13px;
+                    opacity: 0.5;
+                    &:last-child {
+                        position: absolute;
+                        right: 0;
+                        padding-right: 0;
+                        }
+                    }
+                .card-member svg {
+                    width: 20px;
+                    height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
